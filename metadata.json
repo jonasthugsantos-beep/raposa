@@ -1,0 +1,6 @@
+{
+  "name": "Clube das Raposinhas",
+  "description": "Aplicativo PWA mobile-first do Clube de Assinatura das Raposinhas: contos de fadas, narrativas medievais e histórias encantadas com leitura imersiva e áudio completo narrado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

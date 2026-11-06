@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-gold: #D4AF37;
+    --color-gold-light: #F9E79F;
+    --color-gold-dark: #B8860B;
+    --color-rose: #F8C8DC;
+    --color-rose-deep: #FFB6C1;
+    --color-purple: #6B4C9A;
+    --color-purple-dark: #4A2C6A;
+    --color-purple-night: #2F1C4A;
+    --color-parchment: #FDF6E3;
+    --color-parchment-dark: #F5E8C7;
+    --color-forest: #2F4F4F;
+    --color-charcoal: #1A1A1A;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #120B1A;
+    color: #1A1A1A;
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-serif-royal {
+    font-family: 'Cinzel', 'Playfair Display', serif;
+  }
+
+  .font-reading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar and Safe Area */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-top {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+/* Shimmer Gold Effect */
+@keyframes shimmer-gold {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFE082 0%, #D4AF37 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F9E79F 0%, #D4AF37 50%, #AA7C11 100%);
+}
+
+.royal-purple-bg {
+  background: linear-gradient(180deg, #4A2C6A 0%, #2F1C4A 60%, #1A0E2A 100%);
+}
+
+.parchment-texture {
+  background-color: #FDF6E3;
+  background-image: radial-gradient(#E8D5B5 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glow Utilities */
+.shadow-gold {
+  box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.35);
+}
+
+.shadow-purple {
+  box-shadow: 0 8px 25px -4px rgba(74, 44, 106, 0.45);
+}

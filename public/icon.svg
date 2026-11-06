@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A2C6A"/>
+      <stop offset="50%" stop-color="#2F1C4A"/>
+      <stop offset="100%" stop-color="#1A112A"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="45%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <linearGradient id="foxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A65"/>
+      <stop offset="60%" stop-color="#E64A19"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5"/>
+      <stop offset="100%" stop-color="#F8C8DC"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle / Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Enchanted Border -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-dasharray="8 6"/>
+  <circle cx="256" cy="256" r="222" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Magic Stars / Sparkles -->
+  <g fill="url(#goldGrad)" opacity="0.85">
+    <path d="M 120 120 L 124 135 L 139 139 L 124 143 L 120 158 L 116 143 L 101 139 L 116 135 Z"/>
+    <path d="M 390 130 L 393 142 L 405 145 L 393 148 L 390 160 L 387 148 L 375 145 L 387 142 Z"/>
+    <path d="M 100 370 L 103 380 L 113 383 L 103 386 L 100 396 L 97 386 L 87 383 L 97 380 Z"/>
+    <path d="M 400 360 L 404 374 L 418 378 L 404 382 L 400 396 L 396 382 L 382 378 L 396 374 Z"/>
+  </g>
+
+  <!-- Enchanted Fox Head Silhouette -->
+  <!-- Ears -->
+  <polygon points="170,260 130,140 220,195" fill="url(#foxGrad)"/>
+  <polygon points="170,250 145,160 210,205" fill="#4A2C6A" opacity="0.7"/>
+  
+  <polygon points="342,260 382,140 292,195" fill="url(#foxGrad)"/>
+  <polygon points="342,250 367,160 302,205" fill="#4A2C6A" opacity="0.7"/>
+
+  <!-- Main Face -->
+  <polygon points="140,240 372,240 256,410" fill="url(#foxGrad)"/>
+  
+  <!-- Cheeks / White fluff -->
+  <polygon points="140,240 200,280 256,360 190,360" fill="url(#roseGrad)"/>
+  <polygon points="372,240 312,280 256,360 322,360" fill="url(#roseGrad)"/>
+  
+  <!-- Snout -->
+  <polygon points="215,310 297,310 256,395" fill="#FFF8F0"/>
+  <!-- Nose -->
+  <ellipse cx="256" cy="385" rx="18" ry="12" fill="#2E1C38"/>
+  <ellipse cx="254" cy="382" rx="4" ry="2" fill="#FFFFFF" opacity="0.7"/>
+
+  <!-- Eyes - Gentle magical closed/curved smiling eyes -->
+  <path d="M 185 270 Q 205 285 225 272" fill="none" stroke="#2E1C38" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 287 272 Q 307 285 327 270" fill="none" stroke="#2E1C38" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Royal Princess Crown -->
+  <g filter="url(#glow)">
+    <polygon points="256,120 280,175 325,145 310,195 202,195 187,145 232,175" fill="url(#goldGrad)"/>
+    <rect x="200" y="195" width="112" height="14" rx="3" fill="url(#goldGrad)"/>
+    <!-- Gems -->
+    <circle cx="256" cy="135" r="7" fill="#FF4081"/>
+    <circle cx="190" cy="155" r="5" fill="#E040FB"/>
+    <circle cx="322" cy="155" r="5" fill="#E040FB"/>
+    <circle cx="230" cy="202" r="3" fill="#00E5FF"/>
+    <circle cx="256" cy="202" r="4" fill="#FF4081"/>
+    <circle cx="282" cy="202" r="3" fill="#00E5FF"/>
+  </g>
+
+  <!-- Star aura at bottom -->
+  <text x="256" y="465" font-family="'Cinzel', serif" font-size="28" font-weight="bold" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="4">CLUBE DAS RAPOSINHAS</text>
+</svg>

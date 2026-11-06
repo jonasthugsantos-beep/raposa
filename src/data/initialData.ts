@@ -1,0 +1,246 @@
+import { Story, AppSettings, CategoryInfo } from '../types';
+
+export const INITIAL_CATEGORIES: CategoryInfo[] = [
+  {
+    id: 'floresta-encantada',
+    name: 'Floresta Encantada',
+    icon: '🦊',
+    description: 'Onde as raposinhas mágicas guardam os maiores segredos da natureza',
+    accentColor: '#2F4F4F',
+  },
+  {
+    id: 'contos-de-fadas',
+    name: 'Contos de Fadas',
+    icon: '✨',
+    description: 'Histórias clássicas com pó de pirlimpimpim e lições de coragem',
+    accentColor: '#D4AF37',
+  },
+  {
+    id: 'princesas-e-castelos',
+    name: 'Princesas & Castelos',
+    icon: '👑',
+    description: 'Aventuras reais em salões dourados e torres floridas',
+    accentColor: '#F8C8DC',
+  },
+  {
+    id: 'lendas-medievais',
+    name: 'Lendas Medievais',
+    icon: '🛡️',
+    description: 'Cavaleiros gentis, dragões cantores e brasões de honra',
+    accentColor: '#6B4C9A',
+  },
+  {
+    id: 'historias-para-dormir',
+    name: 'Para Dormir',
+    icon: '🌙',
+    description: 'Narrativas suaves como canção de ninar sob o luar',
+    accentColor: '#4A2C6A',
+  },
+];
+
+export const INITIAL_SETTINGS: AppSettings = {
+  monthlyPrice: 29.90,
+  planName: 'Assinatura Mensal Encantada',
+  isSubscriptionActive: true,
+  bannerNotice: '✨ Nova história toda semana! Acesso ilimitado a áudios e leituras.',
+  landingHeroTitle: 'O Reino Mágico Onde Cada Conto Ganha Vida',
+  landingHeroSubtitle: 'Assine o Clube das Raposinhas e abra as portas para um universo de princesas, castelos dourados, florestas mágicas e áudios que acalmam o coração.',
+  storiesCountText: '+50 Contos Exclusivos em Áudio e Texto',
+  perksList: [
+    'Acesso ilimitado a todas as histórias em texto e áudio completo',
+    'Narração oficial acolhedora com voz doce e carinhosa de conto de fadas',
+    'Player de áudio com visualizador mágico e timer para o soninho',
+    'Novos contos exclusivos adicionados semanalmente',
+    'Tradução e narração completa em Português 🇧🇷, Espanhol 🇪🇸 e Inglês 🇺🇸',
+    'Funciona 100% offline no seu celular como app nativo (PWA)',
+  ],
+};
+
+export const INITIAL_STORIES: Story[] = [
+  {
+    id: 'a-aventura-na-floresta-dos-murmurios-o-cha-da-artesa',
+    title: 'Aventuras na Floresta dos Murmúrios: O Chá da Artesã',
+    slug: 'aventuras-na-floresta-dos-murmurios-o-cha-da-artesa',
+    description: 'História oficial narrada pela voz acolhedora da narradora! Uma tarde com cheirinho de bolo de nozes, amoras doces e o reencontro na cabana mágica da artesã.',
+    coverUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    audioUrl: '/assets/aistudio/WhatsApp_Audio_2026-11-02_at_13.12.22_6bb551f8.aac',
+    audioDurationSec: 110, // 1 min 50s
+    category: 'floresta-encantada',
+    tags: ['Voz Oficial', 'Artesã', 'Amizade', 'Floresta dos Murmúrios'],
+    readingTimeMinutes: 3,
+    isPublished: true,
+    isFeatured: true,
+    views: 890,
+    listens: 1240,
+    createdAt: '2026-11-01T10:00:00Z',
+    updatedAt: '2026-11-02T13:12:00Z',
+    contentHtml: `
+<p class="leading-relaxed mb-4">Sabe, de todas as nossas aventuras pela Floresta dos Murmúrios, houve um dia em que o perigo não veio de tempestades nem de riachos bravos... veio de uma pequena distração na cozinha da artesã da floresta.</p>
+
+<p class="leading-relaxed mb-4">A tarde estava fresquinha, daquelas com cheiro de bolo de nozes e terra molhada. Eu tinha ido até a cabana da artesã, aquela casinha fofa, com coisas penduradas, frascos de vidro e luzinhas, para levar um relógio de bolso que precisava de um ajuste nos ponteiros.</p>
+
+<div class="my-6 p-4 rounded-xl border border-[#D4AF37]/50 bg-[#D4AF37]/15 text-center italic text-[#4A2C6A]">
+  "Mesmo nas tardes mais calmas, os pequenos detalhes guardam as maiores lições do coração."
+  <span class="block text-xs mt-1 text-[#8B6508]">— Caderno Secreto da Artesã da Floresta</span>
+</div>
+
+<p class="leading-relaxed mb-4">A artesã é a pessoa mais calma e acolhedora do mundo, mas naquele dia, ela pediu-me um favor: ir ali à clareira colher umas folhinhas de hortelã da lua para o nosso chá da tarde.</p>
+
+<p class="leading-relaxed mb-4">O problema é que no meio do caminho encontrei um arbusto cheio de amoras silvestres, mas tão bonitas e tão doces, que acabei por me distrair.</p>
+
+<p class="leading-relaxed mb-4">Quando dei por mim, o sol tinha sumido, a floresta ficou azulada e o meu telemóvel de bolso tinha ficado na oficina.</p>
+
+<p class="leading-relaxed mb-4">Ainda bem que a coruja Aurélia me encontrou e foi buscar o Juvenal e a corça Flor. Quando eles finalmente me acharam, voltamos todos juntos a rir para a cabana.</p>
+
+<p class="leading-relaxed mb-4">Sentamo-nos à volta da mesa de madeira rústica, bebemos o chá de estrelas bem quentinho e aprendi ali que até os sustos mais parvos se transformam em memórias doces quando temos os amigos certos para nos vir buscar.</p>
+    `,
+  },
+  {
+    id: 'raposinha-e-o-castelo-de-ouro',
+    title: 'A Raposinha e o Castelo de Ouro',
+    slug: 'a-raposinha-e-o-castelo-de-ouro',
+    description: 'No coração da Floresta dos Murmúrios, a jovem raposinha Aurelia descobre uma chave mágica perdida que abre os portões do palácio esquecido da Princesa Aurora.',
+    coverUrl: 'https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=800&q=80',
+    audioUrl: '',
+    audioDurationSec: 420, // 7 min
+    category: 'floresta-encantada',
+    tags: ['Raposinha', 'Castelo', 'Amizade', 'Segredos'],
+    readingTimeMinutes: 6,
+    isPublished: true,
+    isFeatured: true,
+    views: 342,
+    listens: 289,
+    createdAt: '2026-10-15T10:00:00Z',
+    updatedAt: '2026-10-15T10:00:00Z',
+    contentHtml: `
+<p class="leading-relaxed mb-4">Era uma vez, no recanto mais silencioso da Floresta dos Murmúrios, uma raposinha de pelo avermelhado como folhas de outono e ponta da cauda dourada como a primeira luz do sol da manhã. Seu nome era Aurelia, e ela possuía uma curiosidade maior do que a mais alta das sequoias reais.</p>
+
+<p class="leading-relaxed mb-4">Todas as noites, enquanto as corujas afinavam seus violinos e os vagalumes acendiam pequenos lampiões de cristal nas copas dos pinheiros, Aurelia subia até o topo da Colina Serena. De lá, contemplava ao longe as torres reluzentes do Castelo de Ouro, construído no topo de uma montanha cercada por névoas lilases.</p>
+
+<div class="my-6 p-4 rounded-xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-center italic text-[#4A2C6A]">
+  "Aquele que guardar a chave da gentileza jamais encontrará um portão trancado."
+  <span class="block text-xs mt-1 text-[#8B6508]">— Inscrição do Portão Real</span>
+</div>
+
+<p class="leading-relaxed mb-4">Certa tarde de brisa amena, enquanto farejava flores de camomila silvestre à beira do Riacho de Prata, Aurelia avistou algo cintilante preso entre raízes de salgueiro. Aproximou-se cautelosamente e tocou o objeto com a pata: era uma chave esculpida em ouro puro, em formato de cauda de raposa, com uma pequena gema ametista na extremidade.</p>
+
+<p class="leading-relaxed mb-4">Ao erguer a chave, um sussurro suave ecoou pelo ar: <em>'Aurelia, o castelo espera por alguém que saiba ouvir os segredos do coração.'</em> Sem hesitar, com a chave segura em sua bolsinha de linho, a raposinha iniciou a subida rumo à montanha das névoas.</p>
+
+<p class="leading-relaxed mb-4">Pelos degraus de pedra recobertos de musgo aveludado, Aurelia encontrou a Princesa Aurora sentada nos jardins de rosas brancas. A princesa não estava triste, mas aguardava pacientemente a chegada de uma amiga leal com quem compartilhar suas histórias e ensinar aos pequenos do reino a magia de sonhar acordados.</p>
+
+<p class="leading-relaxed mb-4">Desde aquele dia encantado, os portões do Castelo de Ouro nunca mais se fecharam. Todas as noites, a raposinha Aurelia e a Princesa Aurora acendem uma fogueira mágica no pátio central e contam aos passarinhos e estrelas os mais lindos segredos que a amizade verdadeira é capaz de criar.</p>
+    `,
+  },
+  {
+    id: 'o-vestido-de-estrelas-da-princesa-celeste',
+    title: 'O Vestido de Estrelas da Princesa Celeste',
+    slug: 'o-vestido-de-estrelas-da-princesa-celeste',
+    description: 'Para o Grande Baile do Solstício, a princesa pede a ajuda das fadas tecelãs e de uma raposinha celestial para costurar uma túnica feita de constelações.',
+    coverUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
+    audioUrl: '',
+    audioDurationSec: 360, // 6 min
+    category: 'princesas-e-castelos',
+    tags: ['Princesas', 'Estrelas', 'Magia', 'Baile Real'],
+    readingTimeMinutes: 5,
+    isPublished: true,
+    isFeatured: true,
+    views: 295,
+    listens: 251,
+    createdAt: '2026-10-18T14:30:00Z',
+    updatedAt: '2026-10-18T14:30:00Z',
+    contentHtml: `
+<p class="leading-relaxed mb-4">No alto da Torre da Rosa dos Ventos vivia a Princesa Celeste, cujos olhos tinham a cor do céu noturno e o riso soava como sininhos de prata tocados pelo vento sul. O Grande Baile do Solstício se aproximava, e todos no Reino da Lua Cheia preparavam suas mais belas vestes.</p>
+
+<p class="leading-relaxed mb-4">Porém, Celeste não queria sedas comuns nem veludos pesados bordados com joias frias. Ela sonhava em dançar sob o luar vestindo a própria noite: um tecido azul-índigo salpicado de constelações verdadeiras que brilhassem no ritmo da sua respiração.</p>
+
+<p class="leading-relaxed mb-4">Foi então que Serena, a Raposinha das Nuvens, saltou pela janela aberta. Carregava na boca um carretel de fio de luz polar e uma agulha de madrepérola dada pelo pássaro cantor da aurora.</p>
+
+<p class="leading-relaxed mb-4">Juntas, passaram a meia-noite colhendo fagulhas de estrelas cadentes que caíam no jardim e entrelaçando-as com cantigas suaves. Cada ponto dado na bainha era um desejo de paz, ternura e proteção para todas as crianças do reino.</p>
+
+<p class="leading-relaxed mb-4">Quando a princesa entrou no salão dourado, o vestido iluminou suavemente os rostos maravilhados dos convidados. Não havia ostentação, apenas calor, aconchego e a certeza de que até as maiores noites escuras guardam constelações inteiras prontas para brilhar por nós.</p>
+    `,
+  },
+  {
+    id: 'o-cavaleiro-da-esperanca-e-o-dragao-musical',
+    title: 'O Cavaleiro da Esperança e o Dragão Musical',
+    slug: 'o-cavaleiro-da-esperanca-e-o-dragao-musical',
+    description: 'Em vez de uma espada afiada, o jovem Sir Daniel parte em sua jornada empunhando uma harpa de sândalo para acalmar a fera que guardava a Caverna das Ametistas.',
+    coverUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
+    audioUrl: '',
+    audioDurationSec: 510, // 8.5 min
+    category: 'lendas-medievais',
+    tags: ['Cavaleiros', 'Música', 'Dragões', 'Paz'],
+    readingTimeMinutes: 7,
+    isPublished: true,
+    isFeatured: false,
+    views: 180,
+    listens: 164,
+    createdAt: '2026-10-20T09:15:00Z',
+    updatedAt: '2026-10-20T09:15:00Z',
+    contentHtml: `
+<p class="leading-relaxed mb-4">Durante séculos, os bardos da corte cantavam lendas sobre Ignis, o terrível dragão de escamas carmesins que habitava o Monte Trovejante. Diziam que suas labaredas podiam derreter o ferro e que seu rugido fazia estremecer as janelas do palácio real.</p>
+
+<p class="leading-relaxed mb-4">Mas Sir Daniel, o mais jovem dos cavaleiros da Ordem da Raposa Branca, percebeu algo que ninguém havia notado: o rugido do dragão não era de raiva, mas de uma profunda e antiga solidão.</p>
+
+<p class="leading-relaxed mb-4">Rejeitando seu escudo de aço e sua lança polida, Daniel guardou na sela do cavalo apenas sua harpa de sândalo com cordas afinadas na escala dos ventos suaves. Chegando à entrada da Caverna das Ametistas, sentou-se sobre a relva macia e começou a dedilhar uma suave melodia medieval.</p>
+
+<p class="leading-relaxed mb-4">Lentamente, uma imensa cabeça alada surgiu das sombras. Os olhos dourados do dragão refletiam lágrimas de emoção. Ignis soltou uma baforada suave que não queimou, mas fez brotar centenas de lírios lilases ao redor do jovem cavaleiro.</p>
+
+<p class="leading-relaxed mb-4">A partir daquele dia, o Monte Trovejante tornou-se o Monte da Harmonia, onde todos os anos os aldeões sobem para ouvir o dueto entre a harpa de Sir Daniel e os assobios musicais do dragão protetor.</p>
+    `,
+  },
+  {
+    id: 'a-cancao-de-ninar-da-lua-de-prata',
+    title: 'A Canção de Ninar da Lua de Prata',
+    slug: 'a-cancao-de-ninar-da-lua-de-prata',
+    description: 'Um conto suave e relaxante sobre a mãe raposa que ensina aos seus filhotinhos como os sonhos viajam pelo céu da noite para abençoar o soninho.',
+    coverUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
+    audioUrl: '',
+    audioDurationSec: 480, // 8 min
+    category: 'historias-para-dormir',
+    tags: ['Sono', 'Aconchego', 'Maternidade', 'Noite Estrelada'],
+    readingTimeMinutes: 5,
+    isPublished: true,
+    isFeatured: true,
+    views: 410,
+    listens: 520,
+    createdAt: '2026-10-24T20:00:00Z',
+    updatedAt: '2026-10-24T20:00:00Z',
+    contentHtml: `
+<p class="leading-relaxed mb-4">O sol já havia se despedido por trás dos morros arroxeados, cobrindo o bosque com um manto de serenidade azul-marinho. Na toca quentinha forrada de folhas secas de eucalipto e pétalas de alfazema, três raposinhas piscavam seus olhinhos miúdos, cansadas de tantas brincadeiras.</p>
+
+<p class="leading-relaxed mb-4">Mamãe Raposa acariciou o focinho de cada uma com a ponta macia de sua cauda e murmurou: <em>'Fechem os olhos, minhas pequeninas. A Lua de Prata já preparou o barco dos sonhos no rio do céu.'</em></p>
+
+<p class="leading-relaxed mb-4">Respire fundo... sinta o cheirinho de terra molhada e a brisa mansa que balança as cortinas do castelo da noite. Cada estrela que pisca lá fora é um anjo da guarda guardando seu descanso.</p>
+
+<p class="leading-relaxed mb-4">Deixe as preocupações do dia passarem como folhas flutuando na água calma. Você está seguro, protegido pelo amor mais puro e pelas bênçãos do reino encantado. Durma bem, doce raposinha... sonhe com campos floridos e castelos de algodão-doce.</p>
+    `,
+  },
+  {
+    id: 'o-espelho-das-aguas-encantadas',
+    title: 'O Espelho das Águas Encantadas',
+    slug: 'o-espelho-das-aguas-encantadas',
+    description: 'A Princesa Lilian encontra uma lagoa mágica nas profundezas da floresta que reflete não a aparência física, mas as mais belas virtudes escondidas na alma.',
+    coverUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+    audioUrl: '',
+    audioDurationSec: 390, // 6.5 min
+    category: 'contos-de-fadas',
+    tags: ['Autoestima', 'Verdade', 'Bondade', 'Floresta'],
+    readingTimeMinutes: 5,
+    isPublished: true,
+    isFeatured: false,
+    views: 198,
+    listens: 182,
+    createdAt: '2026-10-27T11:45:00Z',
+    updatedAt: '2026-10-27T11:45:00Z',
+    contentHtml: `
+<p class="leading-relaxed mb-4">No Reino de Cristal, todos se preocupavam com joias reluzentes, coroas pesadas e espelhos dourados. Todos, exceto a Princesa Lilian, que preferia calçar suas botinas de couro e caminhar pelos bosques colhendo framboesas silvestres para os esquilos e passarinhos feridos.</p>
+
+<p class="leading-relaxed mb-4">Em uma manhã de outono dourado, seguindo o voo de uma borboleta de asas furta-cor, Lilian alcançou uma clareira desconhecida. No centro repousava uma lagoa cujas águas eram tão límpidas que pareciam vidro lapidado.</p>
+
+<p class="leading-relaxed mb-4">Ao se inclinar para beber água, Lilian não viu seu próprio rosto refletido. No espelho d'água brilhava uma luz dourada deslumbrante, cercada por flores que se abriam e pequenos animais que se aninhavam com gratidão. Uma voz cristalina brotou das profundezas: <em>'Esta é a sua verdadeira beleza, princesa: a bondade sincera que você semeia sem pedir nada em troca.'</em></p>
+
+<p class="leading-relaxed mb-4">Lilian sorriu, compreendendo que nenhuma joia da coroa real jamais teria o valor de um coração generoso. E voltou para o castelo com passos leves, pronta para espalhar mais amor por todo o seu reino.</p>
+    `,
+  },
+];

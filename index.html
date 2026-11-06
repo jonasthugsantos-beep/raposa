@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Clube das Raposinhas - Contos de Fadas, Princesas e Histórias Encantadas</title>
+    <meta name="description" content="Aplicativo PWA mobile-first do Clube de Assinatura das Raposinhas: contos de fadas, narrativas medievais e histórias encantadas com leitura imersiva e áudio completo narrado." />
+    <meta property="og:title" content="Clube das Raposinhas - Contos de Fadas, Princesas e Histórias Encantadas" />
+    <meta property="og:description" content="Aplicativo PWA mobile-first do Clube de Assinatura das Raposinhas: contos de fadas, narrativas medievais e histórias encantadas com leitura imersiva e áudio completo narrado." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- PWA Settings -->
+    <meta name="theme-color" content="#4A2C6A" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Raposinhas" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Google Fonts for Fairy Tale Medieval Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Suprimir erros esperados de desconexão de WebSocket/HMR em ambiente de proxy/nuvem -->
+    <script>
+      (function() {
+        function isViteWsError(msg) {
+          if (!msg) return false;
+          var s = String(msg).toLowerCase();
+          return s.includes('websocket') || s.includes('closed without opened') || s.includes('@vite/client') || s.includes('[vite]');
+        }
+
+        var origError = console.error;
+        console.error = function() {
+          var first = arguments[0];
+          if (isViteWsError(first)) {
+            return;
+          }
+          return origError.apply(console, arguments);
+        };
+
+        window.addEventListener('error', function(e) {
+          var msg = (e && (e.message || (e.error && e.error.message))) || '';
+          if (isViteWsError(msg)) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopPropagation) e.stopPropagation();
+            if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+
+        window.addEventListener('unhandledrejection', function(e) {
+          var reason = e && (e.reason ? (e.reason.message || String(e.reason)) : '');
+          if (isViteWsError(reason)) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopPropagation) e.stopPropagation();
+            if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+  </head>
+  <body class="bg-[#1A1A1A] text-[#1A1A1A] antialiased selection:bg-[#D4AF37]/30 selection:text-[#4A2C6A] select-none">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
